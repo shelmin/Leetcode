@@ -1,3 +1,15 @@
+/*实现 atoi，将字符串转为整数。
+该函数首先根据需要丢弃任意多的空格字符，直到找到第一个非空格字符为止。
+如果第一个非空字符是正号或负号，选取该符号，并将其与后面尽可能多的连续
+的数字组合起来，这部分字符即为整数的值。如果第一个非空字符是数字，则直
+接将其与之后连续的数字字符组合起来，形成整数。字符串可以在形成整数的字
+符后面包括多余的字符，这些字符可以被忽略，它们对于函数没有影响。当字符
+串中的第一个非空字符序列不是个有效的整数；或字符串为空；或字符串仅包含
+空白字符时，则不进行转换。若函数不能执行有效的转换，返回 0。
+说明：
+假设我们的环境只能存储 32 位有符号整数，其数值范围是 [−231,  231 − 1]。
+如果数值超过可表示的范围，则返回  INT_MAX (231 − 1) 或 INT_MIN (−231) 
+。*/
 #include <iostream>
 #include <chrono>
 #include <vector>
@@ -37,7 +49,7 @@ int myAtoi(string str) {
 //		cout << str[i] << endl;
 	}
 	str = str.substr(num, len);
-	if (str[0] == ' ') return 0;    //ȥ���ո��ַ�
+	if (str[0] == ' ') return 0;    //去掉空格字符
 
 
 	num = str.length();
@@ -51,7 +63,7 @@ int myAtoi(string str) {
 		break;
 //		cout << str[i] << endl;
 	}
-	str = str.substr(num, len);     //ȥ��ǰ���0�ַ�
+	str = str.substr(num, len);     //去掉前面的0字符
 
 	num = str.length()-1;
 	char sym = str[0];
@@ -68,7 +80,7 @@ int myAtoi(string str) {
 						continue;
 					else num = i;
 				}
-				str = str.substr(0, num + 1);    //strΪ���������ַ�  ���ü���ǰ���-/+����
+				str = str.substr(0, num + 1);    //str为所求数字字符  还得加上前面的-/+符号
 			}
 			switch (sym)
 			{
@@ -90,7 +102,7 @@ int myAtoi(string str) {
 
 	if (str[0]<'0' || str[0]> '9') {
 		return 0;
-	}             //��һ��Ϊ�ַ�
+	}             //第一个为字符
 
 
 	if (str[0] >'0' || str[0]<'9') {
@@ -102,37 +114,14 @@ int myAtoi(string str) {
 		str = str.substr(0, num+1);
 		str2int(res, str);
 		return res;
-	}             //��һ��Ϊ���֣��Ƿ���
+	}             //第一个为数字，非符号
 }
 int main()
 {
 	string s("0-1");
-	cout << "���ս����" << endl;
+	cout << "最终结果：" << endl;
 	cout <<myAtoi(s)<<endl;
 	cout << minn;
 	system("pause");
 }
 
-
-//	std::vector<double> v(10'000'007, 0.5);
-//	for (auto t_ = v.begin(); t_ != v.end(); t_++) {
-//		std::cout << *t_ << std::endl;
-//	}
-
-//	{
-//		auto t1 = std::chrono::high_resolution_clock::now();
-//		double result = std::accumulate(v.begin(), v.end(), 0.0);
-//		auto t2 = std::chrono::high_resolution_clock::now();
-//		std::chrono::duration<double, std::milli> ms = t2 - t1;
-//		std::cout << std::fixed << "std::accumulate result " << result
-//			<< " took " << ms.count() << " ms\n";
-//	}
-
-//	{
-//		auto t1 = std::chrono::high_resolution_clock::now();
-//		double result = std::reduce(std::execution::par, v.begin(), v.end());
-//		auto t2 = std::chrono::high_resolution_clock::now();
-//		std::chrono::duration<double, std::milli> ms = t2 - t1;
-//		std::cout << "std::reduce result "
-//			<< result << " took " << ms.count() << " ms\n";
-//	}
