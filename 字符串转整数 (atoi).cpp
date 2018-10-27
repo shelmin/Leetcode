@@ -10,32 +10,21 @@
 假设我们的环境只能存储 32 位有符号整数，其数值范围是 [−231,  231 − 1]。
 如果数值超过可表示的范围，则返回  INT_MAX (231 − 1) 或 INT_MIN (−231) 
 。*/
-#include <iostream>
-#include <chrono>
-#include <vector>
-#include <numeric>
-#include <execution>
-#include <string>
-#include <sstream>
-
-#define MAXNUM 2147483647;
-#define MINNUM -2147483648;
 #define INT_MIN (-2147483647 - 1)
-using namespace std;
-
-void str2int(int &int_temp, const string &string_temp)
-{
+class Solution {
+public:
+    int minn = INT_MIN;
+    int maxx = 2147483647;
+    void str2int(int &int_temp, const string &string_temp){//将string转化成int函数，需要include<sstream>
 	stringstream stream(string_temp);
 	stream >> int_temp;
-}
-int minn = INT_MIN;
-int maxx = 2147483647;
-int myAtoi(string str) {
-	int minn = INT_MIN;
+    }
+    int myAtoi(string str) {
+        int minn = INT_MIN;
 	int maxx = 2147483647;
 	int len = str.length();
 	int num = len;
-    int res;
+        int res;
 	int flag = 0;
 
 	if (len < 1) {
@@ -114,14 +103,8 @@ int myAtoi(string str) {
 		str = str.substr(0, num+1);
 		str2int(res, str);
 		return res;
-	}             //第一个为数字，非符号
-}
-int main()
-{
-	string s("0-1");
-	cout << "最终结果：" << endl;
-	cout <<myAtoi(s)<<endl;
-	cout << minn;
-	system("pause");
-}
+	}      
+    
+    }
+};
 
