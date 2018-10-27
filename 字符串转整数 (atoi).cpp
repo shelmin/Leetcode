@@ -8,14 +8,16 @@
 空白字符时，则不进行转换。若函数不能执行有效的转换，返回 0。
 说明：
 假设我们的环境只能存储 32 位有符号整数，其数值范围是 [−231,  231 − 1]。
-如果数值超过可表示的范围，则返回  INT_MAX (231 − 1) 或 INT_MIN (−231) 
+如果数值超过可表示的范围，则返回 INT_MAX (231 − 1) 或 INT_MIN (−231) 
 。*/
 #define INT_MIN (-2147483647 - 1)
 class Solution {
 public:
     int minn = INT_MIN;
     int maxx = 2147483647;
-    void str2int(int &int_temp, const string &string_temp){//将string转化成int函数，需要include<sstream>
+    void str2int(int &int_temp, const string &string_temp){//将string
+	//转化成int函数，需要include<sstream>，若大于有符号int上限，返回
+        //INT_MAX，小于有符号int下限，返回INT_MIN。
 	stringstream stream(string_temp);
 	stream >> int_temp;
     }
@@ -25,21 +27,20 @@ public:
 	int len = str.length();
 	int num = len;
         int res;
-	int flag = 0;
+	int flag = 0; //标记是否含0
 
-	if (len < 1) {
+	if (len < 1) {//长度为0，直接返回0
 		return 0;
-	}
+	} 
+	     
 	for (int i = 0; i < len; i++) {
 		if (str[i] == ' ')  continue;
 		else
 			num = i; 
 		    break; 
-//		cout << str[i] << endl;
 	}
 	str = str.substr(num, len);
-	if (str[0] == ' ') return 0;    //去掉空格字符
-
+	if (str[0] == ' ') return 0;//去掉空格字符
 
 	num = str.length();
 	for (int i = 0; i < str.length(); i++) {
@@ -52,24 +53,25 @@ public:
 		break;
 //		cout << str[i] << endl;
 	}
-	str = str.substr(num, len);     //去掉前面的0字符
+	str = str.substr(num, len);//去掉前面的0字符
 
 	num = str.length()-1;
 	char sym = str[0];
-	if (flag == 1) {
+	if (flag == 1) {//若首符号为0，且去掉后的首字符不为数字，直接返回0
 		if(str[0]<'0' || str[0]> '9') return 0;
 	}
-	if (flag == 0) {
+	if (flag == 0) {//若首符号没有0，分类讨论
 		if (str[0] == '-' || str[0] == '+')
-		{
-			if (str[1]<'0' || str[1]> '9') return 0;
-			else {
+		{//首字符为 + — 号
+			if (str[1]<'0' || str[1]> '9') return 0; //正负号后面跟随为非数字，直接返回0
+			else {//正负号后面跟随数字
+				num=str.length();
 				for (int i = 1; i < str.length(); i++) {
 					if (str[i] >= '0' && str[i] <= '9')
 						continue;
-					else num = i;
+					else num = i; break;
 				}
-				str = str.substr(0, num + 1);    //str为所求数字字符  还得加上前面的-/+符号
+				str = str.substr(0, num);    //str为所求数字字符  还得加上前面的-/+符号
 			}
 			switch (sym)
 			{
@@ -89,17 +91,17 @@ public:
 		}
 	}
 
-	if (str[0]<'0' || str[0]> '9') {
+	if (str[0]<'0' || str[0]> '9') {//第一个为字符
 		return 0;
-	}             //第一个为字符
+	}            
 
 
-	if (str[0] >'0' || str[0]<'9') {
+	if (str[0] >'0' || str[0]<'9') {//第一个为数字
 		for (int i = 0; i < str.length(); i++) {
 			if (str[i]<'0' || str[i]> '9')
 				continue;
 			else num = i;
-		}
+		}    
 		str = str.substr(0, num+1);
 		str2int(res, str);
 		return res;
