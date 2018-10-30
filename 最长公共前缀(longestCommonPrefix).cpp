@@ -1,3 +1,7 @@
+/*
+编写一个函数来查找字符串数组中的最长公共前缀。
+如果不存在公共前缀，返回空字符串 ""。
+*/
 #include <iostream>
 #include <vector>
 #include <string>
@@ -5,7 +9,7 @@
 #include <algorithm>
 
 using namespace std;
-string longestCommonPrefix(vector<string>& strs) {//目标函数
+string longestCommonPrefix(vector<string>& strs) {//目标函数   注意传参vector<value_type>& 和 vector<value_type>的区别
 	if (strs.empty()) return "";  //当输入为指针类的类型时，需要时刻记得讨论空串的情况，不然容易出现指针越界等的报错
 	if (strs.size() == 1) return strs[0]; //输入只有一个字符串
 	vector<int> length;  //保存每个字符的长度
