@@ -6,9 +6,9 @@
 
 using namespace std;
 string longestCommonPrefix(vector<string>& strs) {//目标函数
-	if (strs.empty()) return "";
-	if (strs.size() == 1) return strs[0];
-	vector<int> length;
+	if (strs.empty()) return "";  //当输入为指针类的类型时，需要时刻记得讨论空串的情况，不然容易出现指针越界等的报错
+	if (strs.size() == 1) return strs[0]; //输入只有一个字符串
+	vector<int> length;  //保存每个字符的长度
 	for (vector<string>::iterator itr = strs.begin(); itr != strs.end(); itr++) {
 		length.push_back((*itr).length());
 		cout << *itr << endl;
@@ -17,7 +17,7 @@ string longestCommonPrefix(vector<string>& strs) {//目标函数
 	//cout << length[4] << endl;
 	auto minPosition = min_element(length.begin(), length.end());
 	//cout << *length.begin();
-	int min = length[minPosition - length.begin()];
+	int min = length[minPosition - length.begin()];  //保存strs 的最短字符的长度
 	cout << min << endl;
 	string comStr;
 	bool flag = 0;
