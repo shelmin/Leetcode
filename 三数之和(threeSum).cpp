@@ -7,6 +7,7 @@
 #include <algorithm>
 
 using namespace std;
+//优先想到三重循环依次判断，然后去重，时间复杂度极高
 //拿到一串数字可以先想到排序
 //快排？归并排序？冒泡?...
 
@@ -35,24 +36,21 @@ void myquicksort(vector<int> &vec, int low, int high){ //快排，必须传引�
 vector<vector<int>> threeSum(vector<int>& nums) {
 	vector<vector<int>> re;
 	if (nums.empty()) return re;
-	myquicksort(nums, 0, nums.size()-1);
+	myquicksort(nums, 0, nums.size()-1); //快速排序
 	for (int i = 0; i < nums.size(); i++) {
 		cout << nums[i] << " ";
 	}
-
-	
-	vector<int> temp;
 	if (nums[0] > 0) return re; //最小数大于0
 	if (nums[0] == 0 && nums[1] > 0) return re;//最小数等于0，次小数大于0
 	if (nums[0] == 0 && nums[1] == 0 && nums[2] > 0) return re;//最小数等于0，次小数等于0，次次小数大于0
-	if (nums[0] == 0 && nums[1] == 0 && nums[2] == 0) { re.push_back({ 0,0,0 }); return re; }
+	if (nums[0] == 0 && nums[1] == 0 && nums[2] == 0) { re.push_back({ 0,0,0 }); return re; } //前三个数全为0
 
-	vector<int>::iterator itr0;
+	vector<int>::iterator itr0; //保存小于0的最后一个数的位置
 	bool flag = 0;
 	for (vector<int>::iterator itr = nums.begin(); itr != nums.end()-1; itr++) {
 		if (*itr <= 0 && *(itr + 1) >= 0) { itr0 = itr; flag = 1; break; }
 	};
-	if (flag == 0) return re;
+	if (flag == 0) return re; //如果数全小于0的情况，直接返回
 	if ((nums.end() - itr0) > 3 && *(itr0 + 3) == 0 && *(itr0 + 1) == 0 && *(itr0 + 2) == 0) re.push_back({ 0,0,0 });
 	for (vector<int>::iterator itr = nums.begin(); itr != itr0 + 1; itr++) {
 		flag = 0;
