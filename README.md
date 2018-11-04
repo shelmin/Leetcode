@@ -1,6 +1,12 @@
 # Leetcode
 The repository "Leetcode" : record the code for my leetcode journey.
 
+-1.两数之和（twoSum）
+
+-2.两个排序数组的中位数（findMedianSortedArrays）
+
+<0的题未上传github/Leetcode
+
 1.字符串转整数 (atoi)
 
 2.最长公共前缀 (longestCommonPrefix)
