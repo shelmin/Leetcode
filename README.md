@@ -12,3 +12,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 5.有效的括号（isValid）
 
 6.删除排序数组中的重复项（removeDuplicates）
+
+7.盛最多水的容器（maxArea）
