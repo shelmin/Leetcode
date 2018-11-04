@@ -7,3 +7,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 3.三数之和（threeSum）
 
+4.最接近的三数之和（threeSumClosest）
+
