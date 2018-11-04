@@ -10,3 +10,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 4.最接近的三数之和（threeSumClosest）
 
 5.有效的括号（isValid）
+
+6.删除排序数组中的重复项（removeDuplicates）
