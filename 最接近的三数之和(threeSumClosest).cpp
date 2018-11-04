@@ -11,6 +11,9 @@
 using namespace std;
 
 //最简单的三重循环，只用注意不要越界
+        // 或者也可以通过外层循环先确定一个数，之后双指针扫描数组右边剩下的数，对于每次找到的两个数，
+        // 通过这 3 个数的和来更新结果，以后再实现
+        // 转自博客 https://blog.csdn.net/hacker_zhidian/article/details/80257080
 int threeSumClosest(vector<int>& nums, int target) {
 	int near_sum = 9999;
 	for (vector<int>::iterator itr1 = nums.begin(); itr1 != nums.end()-2; itr1++) {
