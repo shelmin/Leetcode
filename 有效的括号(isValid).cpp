@@ -13,6 +13,10 @@
 
 using namespace std;
 
+//这题用一个栈来保存需要被“消除”掉的左括号类型，若新近的括号与栈顶括号刚好“配对”
+//成功，则进行出栈操作，循环结束后，若栈为空，返回true,反之，表示仍有左括号未“配对”
+//成功，则返回false。
+
 bool isValid(string s) {
 	int len = s.length();
 	stack<char> st;
