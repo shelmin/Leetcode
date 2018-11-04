@@ -10,7 +10,7 @@
 
 using namespace std;
 
-
+//最简单的三重循环，只用注意不要越界
 int threeSumClosest(vector<int>& nums, int target) {
 	int near_sum = 9999;
 	for (vector<int>::iterator itr1 = nums.begin(); itr1 != nums.end()-2; itr1++) {
@@ -24,6 +24,7 @@ int threeSumClosest(vector<int>& nums, int target) {
 	}
 	return near_sum;
 }
+
 int main() {
 	vector<int> nums = { 1,1,-1,-1,3 };
 	int target = 3;
