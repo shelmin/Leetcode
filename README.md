@@ -20,3 +20,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 6.删除排序数组中的重复项（removeDuplicates）
 
 7.盛最多水的容器（maxArea）
+
+8.最长回文子串(longestPalindrome)
