@@ -15,12 +15,12 @@
    遍历字符：一层循环、O(n-1)；
 
    找以当前字符为中心的最长回文子串：嵌套两个独立循环、O(2n*(n-1)) = O(n^2)。
-*/
 --------------------- 
 作者：Zt小哥 
 来源：CSDN 
 原文：https://blog.csdn.net/qq_32354501/article/details/80084325 
 版权声明：本文为博主原创文章，转载请附上博文链接！
+*/
 
 #include <iostream>
 #include <vector>
