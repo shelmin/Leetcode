@@ -22,3 +22,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 7.盛最多水的容器（maxArea）
 
 8.最长回文子串(longestPalindrome)
+
+9.字符串相乘（multiply）
