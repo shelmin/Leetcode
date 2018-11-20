@@ -14,7 +14,9 @@
 #include <algorithm>
 #include <stack>
 #include <cmath>
-
+/*
+**c与c++中长整型，浮点型，double型等的表示方法,以及最大位数
+*/
 using namespace std;
 
 string multiply(string num1, string num2) {
