@@ -30,3 +30,21 @@ The repository "Leetcode" : record the code for my leetcode journey.
 11.反转字符串中的单词 III（reverseWords）
 
 12.除自身以外数组的乘积（productExceptSelf）
+
+13.存在重复元素（containsDuplicate）
+
+14.
+
+15.
+
+16.
+
+17.
+
+18.
+
+19.
+
+20.
+
+21.
