@@ -1,5 +1,5 @@
 /*
-**依旧对于数组要先考虑到排序的问题
+** 方法一：依旧对于数组要先考虑到排序的问题
 */
 #include <string>
 #include <sstream>
@@ -51,4 +51,19 @@ int main() {
 	cout << containsDuplicate(A) << endl;
 	system("pause");
 	return 0;
+}
+
+
+/*
+** 方法二：使用set，set的特性是，所有元素都会根据元素的键值自动排序，
+** set的元素不像map那样可以同时拥有实值(value)和键值(key),set元素
+** 的键值就是实值，实值就是键值。set不允许两个元素有相同的键值。
+*/
+bool containsDuplicate(vector<int>& nums) {
+   set<int> A;
+   for (int i = 0; i < nums.size(); i++) {
+	A.insert(nums[i]);
+	}
+    if (A.size() != nums.size()) return true;
+    else return false;
 }
