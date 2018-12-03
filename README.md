@@ -33,7 +33,7 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 13.存在重复元素（containsDuplicate）
 
-14.
+14.螺旋矩阵Ⅰ（spiralOrder）
 
 15.
 
