@@ -35,7 +35,7 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 14.螺旋矩阵Ⅰ（spiralOrder）
 
-15.
+15.螺旋矩阵 Ⅱ（generateMatrix）
 
 16.
 
