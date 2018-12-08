@@ -39,7 +39,7 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 16.合并两个有序数组(merge)
 
-17.
+17.反转链表(reverseList)
 
 18.
 
