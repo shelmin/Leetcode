@@ -37,11 +37,11 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 15.螺旋矩阵 Ⅱ（generateMatrix）
 
-16.合并两个有序数组(merge)
+16.合并两个有序数组（merge）
 
-17.反转链表(reverseList)
+17.反转链表（reverseList）
 
-18.
+18.两数相加（addTwoNumbers）
 
 19.
 
