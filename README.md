@@ -47,4 +47,4 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 20.2的幂（isPowerOfTwo）
 
-21.
+21.合并K个排序链表（mergeKLists）
