@@ -45,6 +45,6 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 19.合并两个有序链表（mergeTwoLists）
 
-20.
+20.2的幂（isPowerOfTwo）
 
 21.
