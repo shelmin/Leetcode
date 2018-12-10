@@ -50,3 +50,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 21.合并K个排序链表（mergeKLists）
 
 22.旋转链表（rotateRight）
+
+23.环形链表（hasCycle）
