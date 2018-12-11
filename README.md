@@ -52,3 +52,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 22.旋转链表（rotateRight）
 
 23.环形链表（hasCycle）
+
+24.环形链表 II（detectCycle）
