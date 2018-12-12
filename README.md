@@ -54,3 +54,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 23.环形链表（hasCycle）
 
 24.环形链表 II（detectCycle）
+
+25.相交链表（getIntersectionNode）
