@@ -56,3 +56,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 24.环形链表 II（detectCycle）
 
 25.相交链表（getIntersectionNode）
+
+26.删除链表中的节点（deleteNode）
