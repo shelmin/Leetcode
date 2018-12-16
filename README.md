@@ -58,3 +58,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 25.相交链表（getIntersectionNode）
 
 26.删除链表中的节点（deleteNode）
+
+27.整数反转（reverse）
