@@ -63,3 +63,4 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 28.回文数（isPalindrome）
 
+29.只出现一次的数字（singleNumber）
