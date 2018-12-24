@@ -67,3 +67,4 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 30.求众数（majorityElement）
 
+31.爬楼梯（climb）
