@@ -63,8 +63,8 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 28.回文数（isPalindrome）
 
-29.只出现一次的数字（singleNumber）
+29.只出现一次的数字（singleNumber）【位操作/异或】
 
-30.求众数（majorityElement）
+30.求众数（majorityElement）【摩尔投票法】
 
-31.爬楼梯（climb）
+31.爬楼梯（climb）【斐波那契数列】
