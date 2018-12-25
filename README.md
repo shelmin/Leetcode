@@ -31,7 +31,7 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 12.除自身以外数组的乘积（productExceptSelf）
 
-13.存在重复元素（containsDuplicate）
+13.存在重复元素（containsDuplicate）【快速排序】
 
 14.螺旋矩阵Ⅰ（spiralOrder）
 
