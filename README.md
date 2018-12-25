@@ -67,4 +67,6 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 30.求众数（majorityElement）【摩尔投票法】
 
-31.爬楼梯（climb）【斐波那契数列】
+31.爬楼梯（climb）【斐波那契数列】【动态规划】
+
+32.最大子序和（maxSubArray）【动态规划】【归并】
