@@ -69,4 +69,4 @@ The repository "Leetcode" : record the code for my leetcode journey.
 
 31.爬楼梯（climb）【斐波那契数列】【动态规划】
 
-32.最大子序和（maxSubArray）【动态规划】【归并】
+32.最大子序和（maxSubArray）【动态规划】【分治】
