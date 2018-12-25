@@ -74,3 +74,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 33.买卖股票的最佳时机（maxProfit）
 
 34.买卖股票的最佳时机 II（maxProfit）【贪心】
+
+35.不同路径（uniquePaths）【动态规划】
