@@ -72,3 +72,5 @@ The repository "Leetcode" : record the code for my leetcode journey.
 32.最大子序和（maxSubArray）【动态规划】【分治】
 
 33.买卖股票的最佳时机（maxProfit）
+
+34.买卖股票的最佳时机 II（maxProfit）【贪心】
